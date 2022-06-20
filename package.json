@@ -18,7 +18,7 @@
     ]
   },
   "scripts": {
-    "clean": "rimraf dist && bolt ws exec -- rimraf dist tsconfig.tsbuildinfo",
+    "clean-dist": "rimraf dist && bolt ws exec -- rimraf dist tsconfig.tsbuildinfo",
     "build": "bolt ws exec -- tsc --emitDeclarationOnly && bolt ws exec -- swc src --out-dir dist --quiet --extensions \".ts\" --config-file ../../../.swcrc",
     "build:full": "bolt ws exec -- tsc -b",
     "postbuild": "ts-node tools/test-dist",
